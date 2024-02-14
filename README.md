@@ -1,15 +1,14 @@
-# FakeBuster
+# Profile Verifier
 
-## How to run project locally
+## How to set up the project
 
-### setup backend environment variables (Commands assume u are in a unix based environment)
+### setup backend environment variables
 
 ### step 1 : create a dotenv file
 
 ```bash
-
-cd python-backend && touch .env
-
+cd backend && touch .env
+pip install -r requirements.txt
 ```
 
 ```.env
@@ -27,23 +26,19 @@ PASS=<replace with insta password of test account>
 docker compose up -d
 ```
 
-### Frontend
+### Step 3 : Frontend
 
 ```
-cd .. && cd next-frontend
+cd .. && cd frontend
 ```
-
-## Important Nodejs Must be installed
 
 ```
 npm run dev
-
-
 ```
 
 
 
-# FOR WINDOWS:
+# FOR WINDOWS (slight change in Docker setup):
 
 ## Starting the backend service
 
@@ -56,13 +51,13 @@ npm run dev
 
 3. clone the project into your machine
 
-4. In `python-backend > app.py`. The environment variables are not yet fully configured when running in docker
+4. In `backend > app.py`. The environment variables are not yet fully configured when running in docker
 
    > so instead of
    > ```
    > # Instagram API Credentials
-   > INSTAGRAM_USERNAME = os.environ.get("USER")
-   > INSTAGRAM_PASSWORD = os.environ.get("PASS")
+   > INSTAGRAM_USERNAME = os.getenv("USER")
+   > INSTAGRAM_PASSWORD = os.getenv("PASS")
    > ```
    > hard code the credentials
    > ```
@@ -95,7 +90,7 @@ npm run dev
    ```
    
    
-8. cd to `python-backend` folder and build the docker container by running the command
+8. cd to `backend` folder and build the docker container by running the command
    ```
    docker compose up -d --build
    ```
@@ -109,7 +104,7 @@ npm run dev
 
 ## Starting the frontend
 
-1. cd into `next-frontend`
+1. cd into `frontend`
 
 2. Install dependencies using
     ```js
