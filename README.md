@@ -1,8 +1,12 @@
 # Profile Verifier
 
+![instafake](https://github.com/vak-01/Profile-Verifier/assets/78302047/e5b73fc3-0196-47e6-a56d-37ffa2ff8b2c)
+
+
 ## How to set up the project
 
 ### setup backend environment variables
+
 
 ### step 1 : create a dotenv file
 
